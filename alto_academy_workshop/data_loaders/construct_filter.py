@@ -16,11 +16,11 @@ def load_data(devices_datapoints, *args, **kwargs):
     if isinstance(query_period_seconds, str):
         query_period_seconds = int(query_period_seconds)
     # construct filter
-    # start_timestamp = kwargs['interval_start_datetime'].timestamp() - query_period_seconds
-    # end_timestamp = kwargs['interval_start_datetime'].timestamp()
+    start_timestamp = kwargs['interval_start_datetime'].timestamp() - query_period_seconds
+    end_timestamp = kwargs['interval_start_datetime'].timestamp()
     
-    end_timestamp = 1693045380
-    start_timestamp = end_timestamp - query_period_seconds
+    # end_timestamp = 1693045380
+    # start_timestamp = end_timestamp - query_period_seconds
 
     filter_list = []
     for device_id, datapoints in devices_datapoints.items():

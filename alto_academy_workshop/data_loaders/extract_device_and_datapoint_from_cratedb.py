@@ -37,8 +37,8 @@ def load_data(*args, **kwargs):
 
     start_timestamp = kwargs['interval_start_datetime'].timestamp() - query_period_seconds
     end_timestamp = kwargs['interval_start_datetime'].timestamp()
-    end_timestamp = 1693045380
-    start_timestamp = end_timestamp - query_period_seconds
+    # end_timestamp = 1693045380
+    # start_timestamp = end_timestamp - query_period_seconds
     # select unique device_id and datapoint from table
     devices_datapoints = cratedb.get_unique_deviceid_datapoint(
         table_name=cratedb_source_table,
@@ -47,7 +47,6 @@ def load_data(*args, **kwargs):
     )
 
     return devices_datapoints
-
 
 @test
 def test_output(output, *args) -> None:
