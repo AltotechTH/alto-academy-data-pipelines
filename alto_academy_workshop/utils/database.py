@@ -246,7 +246,6 @@ class AltoCrateDB(AltoDatabase):
             cursor = connection.cursor()
             cursor.execute(query_string)
             datas = cursor.fetchall()
-            connection.close()
             devices_datapoints = {}
             for data in datas:
                 if data[0] in devices_datapoints.keys():
@@ -254,6 +253,18 @@ class AltoCrateDB(AltoDatabase):
                 else:
                     devices_datapoints[data[0]] = [data[1]]
             
+            if devices_datapoints == {}:
+                query_string, _ = query_string.split("WHERE")
+                cursor.execute(query_string)
+                datas = cursor.fetchall()
+                devices_datapoints = {}
+                for data in datas:
+                    if data[0] in devices_datapoints.keys():
+                        devices_datapoints[data[0]].append(data[1])
+                    else:
+                        devices_datapoints[data[0]] = [data[1]]
+            connection.close()
+
             return devices_datapoints
         except Exception as e:
             print(e)
@@ -282,7 +293,9 @@ class AltoCrateDB(AltoDatabase):
             res = list()
             for row in datas:
                 res.append({k: v for k, v in zip(column_names, row)})
-
+            
+            return res
+        
         except Exception as e:
             logging.debug(f"Data could not be queried: {e}")
         finally:

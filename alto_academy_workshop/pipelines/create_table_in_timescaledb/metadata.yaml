@@ -1,0 +1,43 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: blue
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: create_table
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks: []
+  uuid: create_table
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2023-09-22 16:30:36.974294+00:00'
+data_integration: null
+description: This pipeline will create a timeseries table in TimescaleDB.
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: create_table_in_timescaledb
+notification_config: {}
+retry_config: {}
+run_pipeline_in_one_process: false
+spark_config: {}
+tags: []
+type: python
+updated_at: '2023-09-22 17:06:10'
+uuid: create_table_in_timescaledb
+variables:
+  timescaledb_db_name: postgres
+  timescaledb_destination_table: aggregated_data
+  timescaledb_host: alto-workshop-timescaledb.postgres.database.azure.com
+  timescaledb_password: af6f4b55-48e0-4fe1-a2b6-67869a28776e
+  timescaledb_port: 5432
+  timescaledb_username: solemnLizard
+widgets: []
