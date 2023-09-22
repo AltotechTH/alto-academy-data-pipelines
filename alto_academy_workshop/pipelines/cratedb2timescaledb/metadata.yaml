@@ -11,12 +11,12 @@ blocks:
   language: python
   name: extract_device_and_datapoint_from_cratedb
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: data_loader
   upstream_blocks: []
   uuid: extract_device_and_datapoint_from_cratedb
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration:
     file_path: null
@@ -28,13 +28,13 @@ blocks:
   language: python
   name: construct_filter
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: data_loader
   upstream_blocks:
   - extract_device_and_datapoint_from_cratedb
   uuid: construct_filter
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks:
@@ -51,7 +51,7 @@ blocks:
   upstream_blocks:
   - construct_filter
   uuid: extract_data_from_cratedb
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks:
@@ -68,7 +68,7 @@ blocks:
   upstream_blocks:
   - extract_data_from_cratedb
   uuid: aggregate
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks: []
@@ -102,10 +102,10 @@ run_pipeline_in_one_process: false
 spark_config: {}
 tags: []
 type: python
-updated_at: '2023-09-22 17:06:16'
+updated_at: '2023-09-22 18:01:21'
 uuid: cratedb2timescaledb
 variables:
-  cratedb_host: 10.242.194.235
+  cratedb_host: 10.241.228.12
   cratedb_port: 4200
   cratedb_source_table: raw_data
   resample_seconds: 60

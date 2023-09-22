@@ -57,6 +57,7 @@ def transform(data2transform, *args, **kwargs):
                 else:
                     try:
                         series = series.astype(float)
+                        aggregate_funcs = ["mean"]
                     except Exception:
                         aggregate_funcs = ["mode"]
                         print(f"Failed to convert {datapoint} to float.")
