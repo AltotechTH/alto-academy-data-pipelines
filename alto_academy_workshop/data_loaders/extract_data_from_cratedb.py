@@ -36,6 +36,8 @@ def load_data(filter_list, *args, **kwargs):
     all_df = pd.DataFrame()
 
     for f in filter_list:
+        if isinstance(f, str):
+            continue
         data = cratedb.query_data(table_name=cratedb_source_table, filters=f)
         df = pd.DataFrame(data)
         if df.empty:
