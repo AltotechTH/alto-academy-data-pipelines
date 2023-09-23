@@ -55,6 +55,5 @@ def load_data(filter_list, *args, **kwargs):
         all_df = all_df.sort_index(ascending=True)
     else:
         print(f"No data is found for the filters {filter_list}")
-        return [filter_list, []]
-    
+        
     return [filter_list, all_df]
