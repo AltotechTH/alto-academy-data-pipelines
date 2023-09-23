@@ -33,10 +33,14 @@ def transform(data2transform, *args, **kwargs):
 
     agg_data = list()
     
-    if isinstance(all_df, list) and all_df == []:
-        print("There is no raw data for all devices to aggregate.")
-        return agg_data, timescaledb_destination_table
-
+    if isinstance(all_df, list):
+        if all_df == []:
+            print("There is no raw data for all devices to aggregate.")
+            return agg_data, timescaledb_destination_table
+    else:
+        if all_df.empty:
+            print("There is no raw data for all devices to aggregate.")
+            return agg_data, timescaledb_destination_table
     for f in filter_list:
         device_id = list(f['device_id'].values())[0]
         datapoints = list(f['datapoint'].values())[0]
