@@ -78,7 +78,7 @@ blocks:
   language: python
   name: load_aggregated_data_to_timescaledb
   retry_config: null
-  status: executed
+  status: updated
   timeout: null
   type: data_exporter
   upstream_blocks:
@@ -102,7 +102,7 @@ run_pipeline_in_one_process: false
 spark_config: {}
 tags: []
 type: python
-updated_at: '2023-09-23 03:48:25'
+updated_at: '2023-09-23 04:05:40'
 uuid: cratedb2timescaledb
 variables:
   cratedb_host: 10.241.228.12

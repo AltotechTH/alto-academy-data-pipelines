@@ -38,7 +38,7 @@ def export_data(data_and_table, *args, **kwargs):
     
     if not data:
         print('The list of data is empty')
-        raise Exception('The list of data is empty')
+        # print('The list of data is empty')
 
 
     try:
