@@ -33,9 +33,9 @@ def transform(data2transform, *args, **kwargs):
 
     agg_data = list()
     
-    # if all_df == []:
-    #     print("There is no raw data for all devices to aggregate.")
-    #     return agg_data, timescaledb_destination_table
+    if all_df.empty:
+        print("There is no raw data for all devices to aggregate.")
+        return agg_data, timescaledb_destination_table
 
     for f in filter_list:
         device_id = list(f['device_id'].values())[0]
