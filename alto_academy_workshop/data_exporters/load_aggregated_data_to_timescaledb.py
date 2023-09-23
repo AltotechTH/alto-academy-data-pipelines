@@ -46,5 +46,5 @@ def export_data(data_and_table, *args, **kwargs):
         print(f"Successfully inserted {len(data)} row(s) of data into TimescaleDB")
     except Exception as e:
         print(f"Cannot insert data to TimescaleDB due to the follow error {e}")
-        raise Exception(f"Cannot insert data to TimescaleDB due to the follow error {e}")
+        # raise Exception(f"Cannot insert data to TimescaleDB due to the follow error {e}")
 

@@ -33,7 +33,7 @@ def transform(data2transform, *args, **kwargs):
 
     agg_data = list()
     
-    if all_df.empty:
+    if isinstance(all_df, list) and all_df == []:
         print("There is no raw data for all devices to aggregate.")
         return agg_data, timescaledb_destination_table
 
