@@ -102,7 +102,7 @@ run_pipeline_in_one_process: false
 spark_config: {}
 tags: []
 type: python
-updated_at: '2023-09-23 04:34:24'
+updated_at: '2023-09-23 07:06:11'
 uuid: cratedb2timescaledb
 variables:
   cratedb_host: 10.241.228.12
@@ -111,8 +111,8 @@ variables:
   resample_seconds: 60
   timescaledb_db_name: postgres
   timescaledb_destination_table: aggregated_data
-  timescaledb_host: alto-workshop-timescaledb.postgres.database.azure.com
-  timescaledb_password: af6f4b55-48e0-4fe1-a2b6-67869a28776e
-  timescaledb_port: 5432
-  timescaledb_username: solemnLizard
+  timescaledb_host: dummy
+  timescaledb_password: dummy
+  timescaledb_port: '0000'
+  timescaledb_username: dummy
 widgets: []
