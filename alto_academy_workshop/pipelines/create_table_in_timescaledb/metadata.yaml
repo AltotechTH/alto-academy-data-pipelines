@@ -35,9 +35,9 @@ updated_at: '2023-09-22 18:45:09'
 uuid: create_table_in_timescaledb
 variables:
   timescaledb_db_name: postgres
-  timescaledb_destination_table: aggregated_data
-  timescaledb_host: alto-workshop-timescaledb.postgres.database.azure.com
-  timescaledb_password: af6f4b55-48e0-4fe1-a2b6-67869a28776e
-  timescaledb_port: 5432
-  timescaledb_username: solemnLizard
+  timescaledb_destination_table: dummy
+  timescaledb_host: dummy
+  timescaledb_password: dummy
+  timescaledb_port: '0000'
+  timescaledb_username: dummy
 widgets: []
